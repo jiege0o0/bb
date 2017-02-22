@@ -12,7 +12,7 @@ mysql_query("set names utf8");
 mysql_query("
 Create TABLE user(
 id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-name varchar(100) NOT NULL,
+name varchar(64) NOT NULL,
 password varchar(32),
 last_land INT UNSIGNED,
 server varchar(500) default '',
