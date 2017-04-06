@@ -14,6 +14,7 @@ Create TABLE user(
 id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
 name varchar(64) NOT NULL,
 password varchar(32),
+quick_password varchar(16),
 last_land INT UNSIGNED,
 server varchar(500) default '',
 UNIQUE (name)

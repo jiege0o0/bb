@@ -1,5 +1,5 @@
 <?php
-	// header('Access-Control-Allow-Origin:*');
+	header('Access-Control-Allow-Origin:*');
 	// set_error_handler("customError");
 	// $filePath = dirname(__FILE__).'/game/';
 
