@@ -1,9 +1,11 @@
 <?php 
 require_once($filePath."tool/conn.php");
+$quick_password = rand(1,99999999);
 $password = rand(100000,999999);
 $time = time();
-$username = 'g'.($time-1458608647).rand(1,999).'@game.com';
-$sql = "insert into user(name,password,last_land) values('".$username."','".$password."',".$time.")";
+$username = 'g'.($time-1499502006).rand(1,999).'@game.com';
+
+$sql = "insert into user(name,password,last_land,quick_password) values('".$username."','".$password."',".$time.",'".$quick_password."')";
 
 $num = $conne->uidRst($sql);
 if($num == 1){
@@ -13,7 +15,9 @@ if($num == 1){
 	$result['name'] = $username;
 	$result['last_land'] = $time;
 	$result['cdkey'] = getCDKey($result['id'],$time);
+	
 	$returnData->data = $result;
+	$returnData->quick_password = $quick_password;
 }
 else
 {
